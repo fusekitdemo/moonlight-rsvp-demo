@@ -1,32 +1,34 @@
-# Moonlight RSVP
+# Moonlite RSVP
 
-Moonlight RSVP is an RSVP demo app.
+Moonlite RSVP is a small party invitation app for `moonlite.rsvp`.
 
-It is intentionally small but real-world enough to prove the product:
+It includes:
 
-- Vite + Vercel Functions app for deployment
-- custom domain in `vercel.json`
-- Resend dependency and env usage
-- RSVP API route that sends confirmation email
-- webhook route protected by `WEBHOOK_SECRET`
-- no committed raw secrets
+- Vite + React frontend
+- Vercel Functions API routes
+- RSVP confirmation email through Resend
+- webhook endpoint protected by a signing secret
+- Cloudflare/Vercel-ready domain config
 
-## Expected FuseKit Inference
-
-From this repo, FuseKit should infer:
-
-- GitHub repo setup
-- Vercel project/env/deploy setup
-- Cloudflare DNS for `moonlite.rsvp`
-- Resend provider pack
-- webhook secret generation
-- live URL verification
-
-Run from the FuseKit repo:
+## Development
 
 ```zsh
-fusekit acceptance run examples/hn-demo-app --mode rehearsal
+npm install
+npm run dev
 ```
 
-For the real recording, copy this app into a disposable GitHub repo and replace
-`moonlite.rsvp` with the domain you control if you are not using the official demo domain.
+## Build
+
+```zsh
+npm run build
+```
+
+Required environment variables:
+
+```text
+NEXT_PUBLIC_APP_URL
+RESEND_API_KEY
+RESEND_FROM_EMAIL
+RESEND_AUDIENCE_ID
+WEBHOOK_SECRET
+```

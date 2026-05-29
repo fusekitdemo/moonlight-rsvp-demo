@@ -50,8 +50,8 @@ export default async function handler(request: RsvpRequest, response: RsvpRespon
     await resend.emails.send({
       from: fromEmail,
       to: email,
-      subject: "You are on the Moonlight RSVP list",
-      html: `<p>${name}, you are on the list.</p><p>FuseKit wired this generated invitation into real services.</p><p>${appUrl || ""}</p>`,
+      subject: "You are on the Moonlite RSVP list",
+      html: `<p>${name}, you are on the list.</p><p>Details live at ${appUrl || "moonlite.rsvp"}.</p>`,
     });
   }
 

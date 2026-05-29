@@ -26,7 +26,7 @@ export default function handler(request: WebhookRequest, response: WebhookRespon
   }
 
   const expectedSignature = process.env.WEBHOOK_SECRET;
-  const providedSignature = String(request.headers["x-fusekit-webhook-secret"] || "");
+  const providedSignature = String(request.headers["x-moonlite-webhook-secret"] || "");
 
   if (!expectedSignature || !safeEqual(expectedSignature, providedSignature)) {
     response.status(401).json({ ok: false });

@@ -12,8 +12,8 @@ function App() {
           <div className="status">RSVP received</div>
           <h1>You are on the list</h1>
           <p>
-            If this page is live on the custom domain and the confirmation email
-            was sent, FuseKit connected the generated invitation to real services.
+            If this page is live on moonlite.rsvp and the confirmation email
+            was sent, your RSVP is confirmed.
           </p>
           <a className="back" href="/">
             Back to invitation
@@ -27,17 +27,17 @@ function App() {
     <main className="screen">
       <section className="hero">
         <div className="status">Friday, 8 PM · Rooftop RSVP</div>
-        <h1>Moonlight RSVP</h1>
+        <h1>Moonlite RSVP</h1>
         <p>
-          A tiny AI-generated party invitation that becomes real only after
-          deploy, domain, email, webhook, and secret wiring are finished.
+          An intimate rooftop invitation for friends, music, and late-night
+          city lights.
         </p>
         <form className="signup" action="/api/rsvp" method="post">
           <input aria-label="Name" name="name" placeholder="Ada Lovelace" required />
           <input
             aria-label="Email address"
             name="email"
-            placeholder="founder@example.com"
+            placeholder="guest@example.com"
             type="email"
             required
           />
