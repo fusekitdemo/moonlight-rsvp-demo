@@ -1,6 +1,6 @@
 # Moonlight RSVP
 
-Moonlight RSVP is the recommended FuseKit Hacker News demo app.
+Moonlight RSVP is an RSVP demo app.
 
 It is intentionally small but real-world enough to prove the product:
 
